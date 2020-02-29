@@ -3,11 +3,20 @@
     margin: 0;
     padding: 0;
 }
+html {
+    background-color: rgb(51, 47, 47);
+}
 body {
     background-color: rgb(59,63,72);
     padding: 5%;
+    margin: 10%;
+    border: solid 5px rgba(0, 0, 0, 0.2);
+    min-height: 50vh;
 }
 
+h1 {
+    color: white;
+}
 header a, li, p{
     list-style: none;
     text-decoration: none;
@@ -19,52 +28,89 @@ header {
     justify-content: space-between;
     align-items: center;
     nav {
-        display: flex;        
+        display: flex;
+        justify-content: space-between;
+        li {
+            text-align: right;
+            p {
+                display: inline;
+            }
+        }
+        li:first-child {
+            margin-right: 2rem;
+            box-sizing: border-box;
+        }
     }
     p {
-        margin: 1rem;
+        margin: 1rem 0 1rem 0;
     }        
 }
 
 input {
-    margin: 5% 0 5% 0;
+    margin: 5% 5% 5% 0;
     height: 2rem;
-    width: 40%;
-    padding-left: 0.5rem;
+    width: 65%;
+    padding-left: 1%;
     border-radius: 5px;
     border: none;
 }
 
 button {
-    margin: 1rem;
     height: 2rem;
-    width: 10%;
+    width: 28%;
     background-color: skyblue;
     border: none;
     border-radius: 5px;
     color: white;
 }
 
-.incompleteTasks, .completeTasks {
-    img {
-        height: 1.8rem;  
-        opacity: 40%;
+
+.trash, .check {
+    transition: 1s;
+    &:hover {
+        transform: scale(1.2);          
     }
+    font-size: 1.5rem;  
+    opacity: 25%;    
+}
+
+.trash {
+    transition: 1s;    
+    margin-right: 0.5rem;
+    &:hover {
+        color: red;
+    }
+}
+
+.check {
+    transition: 1s;    
+    margin-left: 0.5rem;
+    &:hover {
+        color: green;
+    }
+}
+
+.incompleteTasks, .completeTasks {    
     div div{
         display: flex;     
         align-items: center;          
     }
-    p {
+    input {
         width: 90%;
-        padding-left: 2rem;
+        padding: 0 0 0 1rem;
+        margin: 0 1rem 0 1rem;
+        background-color: rgb(59,63,72);
+        color: white;
+        font-size: inherit;
     }    
+    overflow: hidden;
 }
 
 .barra {
     border: solid 1px black;
     width: 100%;
     margin: 1rem 0 1rem 0;
-    opacity: 40%;
+    opacity: 25%;
     background-color: black;
 } 
 
@@ -75,4 +121,57 @@ button {
 .complete {
     color: gray;
     opacity: 50%;
+}
+
+@keyframes trasladar{
+    from {
+        transform: translate(-100%);
+    }
+    to {
+        transform: translate(0%);
+    }
+}
+.task {
+    animation-name: trasladar;
+    animation-duration: 1s;
+}
+
+@keyframes retirar{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.trasladar {
+    animation-name: trasladar;
+    animation-duration: 1s;
+}
+.retirar {
+    animation-name: retirar;
+    animation-duration: 0.5s;
+}
+
+@media (max-width: 746px) {
+    html {
+        font-size: 12px;    
+    }
+
+    button, input {
+        font-size: inherit;
+        width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        margin: 0;
+    }
+
+    body {
+        width: 90%;
+        margin: 5%;
+        box-sizing: border-box;
+    }
 }

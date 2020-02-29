@@ -27,21 +27,22 @@ let button = document.querySelector(".boton")
 
 createTask = function(taskName, task) {    
     let container = document.createElement("div");
-
     let barra = document.createElement("div");
     barra.classList.add("barra");
     container.appendChild(barra); 
 
     let contenido = document.createElement("div");
-    let imgCheck = document.createElement("img");
-    imgCheck.src = "./images/check.png";
+    let imgCheck = document.createElement('i');
+    imgCheck.classList.add("far");
+    imgCheck.classList.add("fa-check-circle");
     imgCheck.classList.add('check');
     contenido.appendChild(imgCheck);
-    let p = document.createElement("p");
-    p.textContent = taskName;
+    let p = document.createElement("input");
+    p.value = taskName;
     contenido.appendChild(p);
-    let imgTrash = document.createElement("img");
-    imgTrash.src = "./images/trash.png";
+    let imgTrash = document.createElement('i');
+    imgTrash.classList.add("fas");
+    imgTrash.classList.add("fa-trash-alt");
     imgTrash.classList.add('trash');
     contenido.appendChild(imgTrash);
     container.appendChild(contenido);
@@ -50,18 +51,30 @@ createTask = function(taskName, task) {
     barra2.classList.add("barra");
     container.appendChild(barra2); 
 
+    container.classList.add("trasladar")
     task.appendChild(container);
 
     if(task==incompleteT) {
         imgCheck.addEventListener('click', function() {
-            createTask(taskName, completeT);
-            task.removeChild(container);
+            createTask(p.value, completeT);
+            container.classList.add("retirar");
+            if(container.style.opacity == 0) {
+                setTimeout(function() {
+                    container.remove(); 
+                }, 500);        
+            }            
         });
     }
     
 
     imgTrash.addEventListener('click', function() {    
-        task.removeChild(container);
+        container.classList.add("retirar");
+        if(container.style.opacity == 0) {
+            setTimeout(function() {
+                container.remove(); 
+              }, 500);
+                   
+        }
     });
 }
 
