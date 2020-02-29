@@ -1,0 +1,94 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #3b3f48;
+  padding: 5%;
+}
+
+header a, li, p {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header p {
+  margin: 1rem;
+}
+
+input {
+  margin: 5% 0 5% 0;
+  height: 2rem;
+  width: 40%;
+  padding-left: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  margin: 1rem;
+  height: 2rem;
+  width: 10%;
+  background-color: skyblue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.incompleteTasks img, .completeTasks img {
+  height: 1.8rem;
+  opacity: 40%;
+}
+
+.incompleteTasks div div, .completeTasks div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.incompleteTasks p, .completeTasks p {
+  width: 90%;
+  padding-left: 2rem;
+}
+
+.barra {
+  border: solid 1px black;
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+  opacity: 40%;
+  background-color: black;
+}
+
+.completeTasks {
+  display: none;
+}
+
+.complete {
+  color: gray;
+  opacity: 50%;
+}
+/*# sourceMappingURL=main.css.map */
