@@ -84,35 +84,16 @@ button {
 }
 
 .trash, .check {
-  -webkit-transition: 1s;
-  transition: 1s;
   font-size: 1.5rem;
   opacity: 25%;
 }
 
-.trash:hover, .check:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
 .trash {
-  -webkit-transition: 1s;
-  transition: 1s;
   margin-right: 0.5rem;
 }
 
-.trash:hover {
-  color: red;
-}
-
 .check {
-  -webkit-transition: 1s;
-  transition: 1s;
   margin-left: 0.5rem;
-}
-
-.check:hover {
-  color: green;
 }
 
 .incompleteTasks, .completeTasks {
@@ -213,6 +194,31 @@ button {
           animation-name: retirar;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+}
+
+@media (min-width: 746px) {
+  .trash, .check {
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .trash:hover, .check:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .trash {
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .trash:hover {
+    color: red;
+  }
+  .check {
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .check:hover {
+    color: green;
+  }
 }
 
 @media (max-width: 746px) {

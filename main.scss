@@ -66,28 +66,16 @@ button {
 
 
 .trash, .check {
-    transition: 1s;
-    &:hover {
-        transform: scale(1.2);          
-    }
     font-size: 1.5rem;  
     opacity: 25%;    
 }
 
-.trash {
-    transition: 1s;    
+.trash {  
     margin-right: 0.5rem;
-    &:hover {
-        color: red;
-    }
 }
 
-.check {
-    transition: 1s;    
+.check { 
     margin-left: 0.5rem;
-    &:hover {
-        color: green;
-    }
 }
 
 .incompleteTasks, .completeTasks {    
@@ -153,6 +141,29 @@ button {
     animation-duration: 1s;
 }
 
+@media (min-width: 746px) {
+    .trash, .check {
+        transition: 1s;
+        &:hover {
+            transform: scale(1.2);          
+        }  
+    }
+    
+    .trash {
+        transition: 1s;    
+        &:hover {
+            color: red;
+        }
+    }
+    
+    .check {
+        transition: 1s;    
+        &:hover {
+            color: green;
+        }
+    }
+
+}
 @media (max-width: 746px) {
     html {
         font-size: 12px;    
