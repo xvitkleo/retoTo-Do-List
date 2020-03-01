@@ -61,7 +61,7 @@ createTask = function(taskName, task) {
             if(container.style.opacity == 0) {
                 setTimeout(function() {
                     container.remove(); 
-                }, 500);        
+                }, 1000);        
             }            
         });
     }

@@ -211,8 +211,8 @@ button {
 .retirar {
   -webkit-animation-name: retirar;
           animation-name: retirar;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 @media (max-width: 746px) {
